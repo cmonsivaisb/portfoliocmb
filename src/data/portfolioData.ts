@@ -1,3 +1,6 @@
+// helpers para rutas de assets en GitHub Pages
+const asset = (p: string) => new URL(p, import.meta.env.BASE_URL).toString();
+
 export const personalInfo = {
   name: 'Carlos Iván Monsiváis Bravo',
   title: 'FullStack Developer',
@@ -5,8 +8,8 @@ export const personalInfo = {
   email: 'monsivaiscarlos545@gmail.com',
   location: 'Saltillo, Coahuila, México',
   bio: 'FullStack Developer especializado en desarrollo web, ecommerce, ERP y sistemas de salud. Experto en crear soluciones tecnológicas que impulsan el crecimiento empresarial.',
-  profileImage: '/images/carlos-profile.jpg',
-  cvPath: '/assets/cv-carlos-monsivais.pdf'
+  profileImage: asset('images/carlos-profile.jpg'),
+  cvPath: asset('assets/cv-carlos-monsivais.pdf')
 };
 
 export const experience = [
@@ -62,7 +65,7 @@ export const projects = [
     id: 1,
     title: 'EMWA',
     description: 'Catálogo en línea con navegación intuitiva y búsqueda de productos optimizada para la experiencia del usuario.',
-    image: '/images/emwa-project.png',
+    image: asset('images/emwa-project.png'),
     url: 'https://emwa.com.mx',
     technologies: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
     category: 'Catálogo Web',
@@ -72,7 +75,7 @@ export const projects = [
     id: 2,
     title: 'DeseGo',
     description: 'Ecommerce de equipo médico con carrito integrado y pasarela de pagos segura para transacciones confiables.',
-    image: '/images/desego-project.png',
+    image: asset('images/desego-project.png'),
     url: 'https://desego.com',
     technologies: ['WooCommerce', 'PHP', 'JavaScript', 'Stripe'],
     category: 'Ecommerce',
@@ -82,7 +85,7 @@ export const projects = [
     id: 3,
     title: 'Papelería Fenix',
     description: 'Sitio de papelería a domicilio con formulario de pedidos ágil y catálogo sencillo pero funcional.',
-    image: '/images/papeleria-project.png',
+    image: asset('images/papeleria-project.png'),
     url: 'https://papeleriaselfenix.com',
     technologies: ['WordPress', 'Contact Form 7', 'PHP', 'JavaScript'],
     category: 'Sitio Corporativo',
@@ -92,7 +95,7 @@ export const projects = [
     id: 4,
     title: 'Tucsa',
     description: 'Página corporativa de transportes con diseño adaptable y comunicación clara de servicios empresariales.',
-    image: '/images/tucsa-project.png',
+    image: asset('images/tucsa-project.png'),
     url: 'https://tucsamx.com',
     technologies: ['WordPress', 'PHP', 'JavaScript', 'Responsive Design'],
     category: 'Sitio Corporativo',
@@ -102,7 +105,7 @@ export const projects = [
     id: 5,
     title: 'Score Expertos en Deportes',
     description: 'Ecommerce de artículos deportivos con experiencia de compra moderna y sección de ofertas destacadas.',
-    image: '/images/score-project.png',
+    image: asset('images/score-project.png'),
     url: 'https://score.com.mx',
     technologies: ['Odoo', 'Python', 'JavaScript', 'XML'],
     category: 'Ecommerce',
