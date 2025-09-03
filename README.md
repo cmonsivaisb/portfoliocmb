@@ -240,10 +240,10 @@ Si encuentras algún error o tienes sugerencias de mejora, no dudes en:
 ## 📞 Contacto
 
 **Carlos Iván Monsivais Bravo**
-- 📧 Email: carlos.monsivais@email.com
+- 📧 Email: monsivaiscarlos545@gmail.com
 - 📍 Ubicación: Saltillo, Coahuila, México
-- 💼 LinkedIn: [carlosmonsivaisbra](https://linkedin.com/in/carlosmonsivaisbra)
-- 🐱 GitHub: [carlosmonsivaisbra](https://github.com/carlosmonsivaisbra)
+- 💼 LinkedIn: [carlosmonsivaisbra](https://www.linkedin.com/in/carlos-monsivais-041358102/)
+- 🐱 GitHub: [carlosmonsivaisbra](https://github.com/cmonsivaisb/)
 
 ---
 
