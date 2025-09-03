@@ -17,42 +17,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
           cache-dependency-path: package-lock.json
-
-      - name: Instalar deps
-        run: npm ci
-
-      # Ejecuta estos pasos solo si existen los scripts en package.json
-      - name: Type check (si existe)
-        run: npm run type-check || echo "sin script type-check, continuando"
-
-      - name: Lint (si existe)
-        run: npm run lint || echo "sin script lint, continuando"
-
-      - name: Build
-        run: npm run build
-
-      - name: Verificar build
+      - run: npm ci
+      - run: npm run build
+      - name: Añadir .nojekyll y 404 para SPA
         run: |
-          test -d dist || (echo "No existe ./dist" && exit 1)
-          ls -la dist
-
-      - name: Configurar Pages
-        uses: actions/configure-pages@v5
-
-      - name: Subir artefacto de Pages
-        uses: actions/upload-pages-artifact@v3
+          touch dist/.nojekyll
+          [ -f dist/index.html ] && cp dist/index.html dist/404.html || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-          # si tu build genera en otra carpeta, cámbialo
 
   deploy:
     needs: build
@@ -61,6 +41,5 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
