@@ -1,6 +1,5 @@
 // helpers para rutas de assets en GitHub Pages
-const asset = (p: string) => new URL(p, import.meta.env.BASE_URL).toString();
-
+const asset = (p: string) => new URL(`../${p}`, import.meta.url).href;
 export const personalInfo = {
   name: 'Carlos Iván Monsiváis Bravo',
   title: 'FullStack Developer',
