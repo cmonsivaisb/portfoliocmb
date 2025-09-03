@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
               {personalInfo.name.split(' ').slice(0, 2).join(' ')}
               <br />
-              <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-gray-900">
+              <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text dark:text-white text-gray-900">
                 {personalInfo.name.split(' ').slice(-2).join(' ')}
               </span>
             </h1>
